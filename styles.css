@@ -74,3 +74,12 @@ background-size:auto 180%;background-position:center 45%;transform:scale(1.03);a
   .venue .host-line{align-items:center;margin:16px auto 0}
   .party-scene .scroll-sequence,.venue .scroll-sequence{opacity:.9}
 }
+/* Center the address card and let the venue show through. */
+.venue .scene-copy.centered{margin:0 auto;text-align:center;max-width:420px}
+.venue .scene-copy.centered>p:not(.eyebrow){margin-left:auto;margin-right:auto}
+.venue .address-card{margin-left:auto;margin-right:auto;background:rgba(7,16,29,.48);text-align:center}
+.venue .address-card a span{float:none;margin-left:8px}
+.venue .host-line{align-items:center;margin-left:auto;margin-right:auto}
+@media(max-width:700px){
+  .venue .address-card{margin:20px auto 13px;background:rgba(7,16,29,.48)}
+}
