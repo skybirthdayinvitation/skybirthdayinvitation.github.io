@@ -70,6 +70,20 @@
   .hero h1{font-size:clamp(32px,6.6vw,44px)!important}
 }
 </style>
+<style>
+/* Make the invitation heading large on one line, below SKY's face. */
+.hero h1{font-size:clamp(44px,8vw,104px)!important;line-height:.9!important;white-space:nowrap}
+.date-copy h2,.date-copy>p{text-align:center!important}
+.date-copy>p{margin-left:auto!important;margin-right:auto!important}
+.date-copy .countdown{justify-content:center;margin-left:auto;margin-right:auto}
+.date-copy .countdown>div{align-items:center;text-align:center}
+@media(max-width:700px){
+  .hero h1{font-size:clamp(32px,10vw,60px)!important}
+}
+@media(max-width:700px) and (max-height:700px){
+  .hero h1{font-size:clamp(44px,9vw,68px)!important}
+}
+</style>
 </head>
 <body>
   <div class="progress"><i></i></div>
@@ -81,7 +95,7 @@
     <section class="scene hero" id="home" data-scene="0">
       <div class="hero-art" role="img" aria-label="A child celebrating with cake among teddy bears"></div><div class="shade"></div>
       <div class="fireworks" aria-hidden="true"><b></b><b></b><b></b></div>
-      <div class="hero-copy reveal"><h1>YOU ARE<br><em>INVITED</em></h1><div class="fine-line"></div><p class="turning">SKY IS TURNING <strong>ONE</strong></p><p class="scroll-hint"><span class="mouse"></span> Scroll or swipe to begin</p></div>
+      <div class="hero-copy reveal"><h1>YOU ARE <em>INVITED</em></h1><div class="fine-line"></div><p class="turning">SKY IS TURNING <strong>ONE</strong></p><p class="scroll-hint"><span class="mouse"></span> Scroll or swipe to begin</p></div>
       <div class="hero-caption">A day as wonderful as you are</div>
     </section>
     <section class="scene date-scene" id="date" data-scene="2">
