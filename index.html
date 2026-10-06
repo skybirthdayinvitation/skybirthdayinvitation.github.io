@@ -31,11 +31,38 @@
 
 
 
-<style>.hero-art{background-image:url('assets/73D57AF2-4083-491F-8196-DAA52DF19E5E.PNG')!important;background-size:cover!important;background-position:center 8%!important}.date-scene .forest-art{z-index:0}.date-scene .scroll-sequence{z-index:1;opacity:.94}</style></head>
+<style>.hero-art{background-image:url('assets/73D57AF2-4083-491F-8196-DAA52DF19E5E.PNG')!important;background-size:cover!important;background-position:center 8%!important}.date-scene .forest-art{z-index:0}.date-scene .scroll-sequence{z-index:1;opacity:.94}</style><style>
+/* Place the invitation title beneath SKY's face and keep it clear of the fixed controls. */
+.hero-copy{position:absolute!important;left:0;right:0;bottom:112px;margin:0 auto!important;width:100%;max-width:none!important;text-align:center;z-index:3}
+.hero h1{font-size:clamp(28px,5.6vw,64px)!important;line-height:.84!important;letter-spacing:-.055em!important;margin:0 0 3px!important}
+.hero .fine-line{margin:4px auto 5px}
+.hero .turning{margin:0;font-size:9px;letter-spacing:.2em}
+.hero .turning strong{font-size:16px}
+.hero .scroll-hint{top:auto;bottom:-94px;left:20px;margin:0}
+.rsvp-fixed{position:fixed!important;z-index:32!important;left:50%;right:auto;bottom:calc(max(16px,env(safe-area-inset-bottom)) + 50px + 8px);transform:translateX(-50%);display:block;padding:10px 14px;border:1px solid #e6c888;border-radius:999px;background:rgba(7,16,29,.94);color:#f4ecd9!important;font:600 10px var(--sans);letter-spacing:.02em;white-space:nowrap;max-width:calc(100vw - 26px);text-align:center;box-shadow:0 8px 28px #0006;backdrop-filter:blur(12px)}
+.date-scene .date-copy{color:#172536;text-shadow:0 1px 1px rgba(255,255,255,.45)}
+.date-scene .date-copy .eyebrow{color:#5e491d!important}
+.date-scene .date-copy h2,.date-scene .date-copy h2 em{color:#172536!important}
+.date-scene .date-copy h2 em{color:#745316!important}
+.date-scene .date-copy .year,.date-scene .date-copy .party-time,.date-scene .date-copy .countdown strong,.date-scene .date-copy .countdown small,.date-scene .date-copy .count-note,.date-scene .date-copy p:not(.eyebrow){color:#1e3041!important}
+.date-scene .date-copy .countdown strong{color:#172536!important}
+.date-scene .date-copy .count-note{color:#263545!important}
+@media(max-width:700px){
+  .hero h1{font-size:clamp(26px,8vw,48px)!important}
+  .hero .scroll-hint{top:-62px;bottom:auto;left:50%;transform:translateX(-50%)}
+  .rsvp-fixed{bottom:calc(max(14px,env(safe-area-inset-bottom)) + 50px + 8px);font-size:9px;padding:9px 12px}
+}
+@media(max-width:700px) and (max-height:700px){
+  .hero h1{font-size:clamp(28px,5.7vw,38px)!important}
+  .hero .scroll-hint{top:auto;bottom:-94px;left:20px;transform:none}
+}
+</style>
+</head>
 <body>
   <div class="progress"><i></i></div>
   
   <audio id="birthday-music" src="assets/sky-birthday-music.mp3" autoplay loop preload="auto"></audio>
+  <a class="rsvp-fixed" href="rsvp.html">Click here to give your response</a>
   <button class="sound sound-bottom" id="music-toggle" type="button" aria-label="Play birthday music"><span class="music-icon">♫</span> <span id="music-label">PLAY MUSIC</span></button>
   <main>
     <section class="scene hero" id="home" data-scene="0">
@@ -64,7 +91,7 @@
     </section>
     <section class="scene venue" id="venue" data-scene="6">
       <canvas class="scroll-video scroll-sequence" data-scroll-sequence data-sequence="assets/drive" data-frame-width="450" data-frame-height="800" data-frame-count="120" data-frames-per-sheet="20" data-columns="5" aria-label="Teddy driving to the birthday address"></canvas>
-      <div class="map-lines"></div><div class="scene-copy centered reveal"><p class="eyebrow">FOLLOW THE STARS</p><h2>Find us<br><em>in Luton.</em></h2><div class="address-card"><span class="pin">✦</span><p><strong>52 Castle St.</strong><br>Chapel Langley<br>Luton, LU1 3AG<br>United Kingdom</p><a target="_blank" rel="noopener" href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x487648431d119815:0x6990cb33148c9e13?entry=s&amp;sa=X&amp;ved=2ahUKEwjpnbjJ34-XAxV6RZ8JHcIdHlcQ4kB6BAgVEAA&amp;hl=en">Open directions <span>↗</span></a></div><div class="host-line"><span>WITH LOVE</span><strong>JOMI &amp; STEFFY</strong></div><a href="rsvp.html" style="display:inline-block;margin-top:18px;padding:12px 20px;border:1px solid #e6c888;border-radius:999px;background:#ffffff14;color:#f4ecd9;text-decoration:none;font:700 13px 'DM Sans',sans-serif;letter-spacing:.03em">RSVP for SKY’s special day ✨</a></div>
+      <div class="map-lines"></div><div class="scene-copy centered reveal"><p class="eyebrow">FOLLOW THE STARS</p><h2>Find us<br><em>in Luton.</em></h2><div class="address-card"><span class="pin">✦</span><p><strong>52 Castle St.</strong><br>Chapel Langley<br>Luton, LU1 3AG<br>United Kingdom</p><a target="_blank" rel="noopener" href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x487648431d119815:0x6990cb33148c9e13?entry=s&amp;sa=X&amp;ved=2ahUKEwjpnbjJ34-XAxV6RZ8JHcIdHlcQ4kB6BAgVEAA&amp;hl=en">Open directions <span>↗</span></a></div><div class="host-line"><span>WITH LOVE</span><strong>JOMI &amp; STEFFY</strong></div></div>
       <div class="scene-note">WE’LL KEEP A LIGHT ON FOR YOU</div>
     </section>
     <section class="scene goodbye" id="goodbye" data-scene="7">
