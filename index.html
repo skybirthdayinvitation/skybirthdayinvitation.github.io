@@ -57,6 +57,19 @@
   .hero .scroll-hint{top:auto;bottom:-94px;left:20px;transform:none}
 }
 </style>
+<style>
+/* Slightly enlarge the first-page title while keeping it below the photo. */
+.hero h1{font-size:clamp(32px,6vw,72px)!important}
+.date-copy{width:min(100%,620px);margin:0 auto!important;text-align:center}
+.date-copy .countdown{justify-content:center}
+.date-scene .scroll-sequence{filter:blur(2px)}
+@media(max-width:700px){
+  .hero h1{font-size:clamp(30px,9vw,58px)!important}
+}
+@media(max-width:700px) and (max-height:700px){
+  .hero h1{font-size:clamp(32px,6.6vw,44px)!important}
+}
+</style>
 </head>
 <body>
   <div class="progress"><i></i></div>
