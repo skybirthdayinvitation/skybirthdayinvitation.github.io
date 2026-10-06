@@ -73,6 +73,6 @@
     </section>
   </main>
   <nav class="chapters" aria-label="Invitation chapters"><a href="#home" aria-label="Beginning"></a><a href="#date" aria-label="Date"></a><a href="#party" aria-label="Party"></a><a href="#photo" aria-label="Birthday photo"></a><a href="#venue" aria-label="Venue"></a></nav>
-  <script src="script.js?v=frames4"></script><script>
+  <script src="script.js?v=frames5"></script><script>
 const birthdayPhoto=document.querySelector(".bag-direct-photo");function zoomBirthdayPhoto(){if(!birthdayPhoto)return;const rect=birthdayPhoto.closest(".scene").getBoundingClientRect();const amount=Math.max(0,Math.min(1,-rect.top/rect.height));birthdayPhoto.style.transform=`scale(${1.04+amount*.16})`}addEventListener("scroll",zoomBirthdayPhoto,{passive:true});addEventListener("resize",zoomBirthdayPhoto,{passive:true});zoomBirthdayPhoto();
 </script>
