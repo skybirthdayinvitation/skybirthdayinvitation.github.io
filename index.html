@@ -322,6 +322,37 @@
   }
 }
 </style>
+<style>
+@media (max-width:700px){
+
+  #venue{
+    position:relative!important;
+    overflow:hidden!important;
+    background:
+      radial-gradient(
+        ellipse at 50% 45%,
+        #304b55 0%,
+        #1b303b 45%,
+        #0d1824 100%
+      )!important;
+  }
+
+  #venue .map-lines{
+    display:none!important;
+  }
+
+  #venue .scroll-sequence{
+    position:relative!important;
+    z-index:2!important;
+  }
+
+  #venue .scene-note{
+    position:relative!important;
+    z-index:3!important;
+  }
+
+}
+</style>
 </head>
 
 <body>
@@ -357,7 +388,7 @@
     </section>
     <section class="scene venue" id="venue" data-scene="6">
       <canvas class="scroll-video scroll-sequence" data-scroll-sequence data-sequence="assets/drive" data-frame-width="450" data-frame-height="800" data-frame-count="120" data-frames-per-sheet="20" data-columns="5" aria-label="Teddy driving to the birthday address"></canvas>
-     <div class="map-lines"></div>
+     <div class="map-lines" style="display:none"></div>
       <div class="scene-note">WE’LL KEEP A LIGHT ON FOR YOU</div>
     </section>
     <section class="scene goodbye" id="goodbye" data-scene="7">
