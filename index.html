@@ -194,6 +194,31 @@
   }
 }
 </style>
+<style>
+@media (max-width:700px){
+  .hero::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:45%;
+    bottom:0;
+    background:linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.45)
+    );
+    pointer-events:none;
+    z-index:1;
+  }
+
+  .hero-copy{
+    position:relative;
+    z-index:2;
+  }
+}
+</style>
+
 
 </head>
 
