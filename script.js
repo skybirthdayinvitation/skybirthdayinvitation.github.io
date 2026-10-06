@@ -55,7 +55,7 @@ function drawSequence(sequence){
   const scale=sequence.scene.classList.contains('hero')?Math.max(width/sequence.tileWidth,height/sequence.tileHeight):Math.min(width/sequence.tileWidth,height/sequence.tileHeight);
   const drawWidth=sequence.tileWidth*scale,drawHeight=sequence.tileHeight*scale;
   const isPortrait=sequence.tileHeight>sequence.tileWidth;
-  const x=isPortrait&&width/height>sequence.tileWidth/sequence.tileHeight?width-drawWidth-width*.08:(width-drawWidth)/2;
+  const x=(width-drawWidth)/2;
   sequence.ctx.drawImage(image,sx,sy,sequence.tileWidth,sequence.tileHeight,x,(height-drawHeight)/2,drawWidth,drawHeight);
   sequence.lastDrawn=frame;
 }
