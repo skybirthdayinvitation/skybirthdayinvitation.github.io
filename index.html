@@ -248,19 +248,21 @@
   }
 }
 </style>
-    <style>
+<style>
 @media (max-width:700px){
-  .bag-scene::after{
-    background:linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.50)
-    )!important;
+  .bag-scene:after{
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.05) 35%,
+        rgba(0,0,0,0.60) 100%
+      )!important;
+    z-index:2!important;
   }
 
   .bag-copy{
     position:relative;
-    z-index:3;
+    z-index:3!important;
   }
 }
 </style>
