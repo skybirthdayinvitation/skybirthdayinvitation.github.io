@@ -48,10 +48,19 @@ function drawSequence(sequence){
   const sy=Math.floor(localFrame/sequence.columns)*sequence.tileHeight;
   const coverScale=Math.max(width/sequence.tileWidth,height/sequence.tileHeight)*1.12;
   const coverWidth=sequence.tileWidth*coverScale,coverHeight=sequence.tileHeight*coverScale;
+ if(!sequence.scene.classList.contains('venue')){
   sequence.ctx.save();
   if('filter' in sequence.ctx)sequence.ctx.filter='blur(22px) brightness(.56) saturate(1.12)';
-  sequence.ctx.drawImage(image,sx,sy,sequence.tileWidth,sequence.tileHeight,(width-coverWidth)/2,(height-coverHeight)/2,coverWidth,coverHeight);
+  sequence.ctx.drawImage(
+    image,
+    sx,sy,
+    sequence.tileWidth,sequence.tileHeight,
+    (width-coverWidth)/2,
+    (height-coverHeight)/2,
+    coverWidth,coverHeight
+  );
   sequence.ctx.restore();
+}
   const scale=sequence.scene.classList.contains('hero')?Math.max(width/sequence.tileWidth,height/sequence.tileHeight):Math.min(width/sequence.tileWidth,height/sequence.tileHeight);
   const drawWidth=sequence.tileWidth*scale,drawHeight=sequence.tileHeight*scale;
   const isPortrait=sequence.tileHeight>sequence.tileWidth;
