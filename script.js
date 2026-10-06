@@ -52,7 +52,7 @@ function drawSequence(sequence){
   if('filter' in sequence.ctx)sequence.ctx.filter='blur(22px) brightness(.56) saturate(1.12)';
   sequence.ctx.drawImage(image,sx,sy,sequence.tileWidth,sequence.tileHeight,(width-coverWidth)/2,(height-coverHeight)/2,coverWidth,coverHeight);
   sequence.ctx.restore();
-  const scale=Math.min(width/sequence.tileWidth,height/sequence.tileHeight);
+  const scale=sequence.scene.classList.contains('hero')?Math.max(width/sequence.tileWidth,height/sequence.tileHeight):Math.min(width/sequence.tileWidth,height/sequence.tileHeight);
   const drawWidth=sequence.tileWidth*scale,drawHeight=sequence.tileHeight*scale;
   const isPortrait=sequence.tileHeight>sequence.tileWidth;
   const x=isPortrait&&width/height>sequence.tileWidth/sequence.tileHeight?width-drawWidth-width*.08:(width-drawWidth)/2;
